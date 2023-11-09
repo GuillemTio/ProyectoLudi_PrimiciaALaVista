@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 72212858}
   - component: {fileID: 72212857}
   - component: {fileID: 72212856}
+  - component: {fileID: 72212859}
   m_Layer: 5
   m_Name: Noticia1
   m_TagString: Untagged
@@ -362,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -392,7 +393,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 72212857}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 72212859}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: ActivarNoticia
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1388780351}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &72212857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +444,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72212854}
   m_CullTransparentMesh: 1
+--- !u!114 &72212859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72212854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1cc6e1e6a8dad44bfb1c2a3f856cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &90138415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 63}
+  m_AnchoredPosition: {x: 0, y: 54}
   m_SizeDelta: {x: 350, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370134544
@@ -3687,6 +3712,7 @@ GameObject:
   - component: {fileID: 1611630054}
   - component: {fileID: 1611630056}
   - component: {fileID: 1611630055}
+  - component: {fileID: 1611630057}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3734,7 +3760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ad3refef efefeas efefawd wfeaasdw. fasfawfwf fwaf wfadf fsfwf wfs. 333r
+  m_text: ad3refef efefeas efefawd wfeaasdw. fasfawfwf fwaf wfadf rosa wfs. 333r
     dfsggg gshdfg hsf gshsh hthsfgsh shsgsfdhss hsfhsdfh hsthfh.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3812,6 +3838,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611630053}
   m_CullTransparentMesh: 1
+--- !u!114 &1611630057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611630053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750e48177b7b0de49a24b0f7ab3278be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1611630055}
+  m_Camera: {fileID: 519420031}
+  correctWord: rosa
 --- !u!1 &1617325212
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] private TMP_Text text;
     public Camera m_Camera;
-    string correctWord = "carrer";
+    public string correctWord;
     string correctColor = "#4cbb17";
     string wrongColor = "#e32636";
 
@@ -19,10 +19,11 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         //Debug.Log(TMP_TextUtilities.IsIntersectingRectTransform(text.rectTransform, Input.mousePosition, m_Camera));
         if (Input.GetMouseButtonDown(0))
         {
-
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
+            Debug.Log(index);
             if (index > -1)
             {
+                Debug.Log("aaaaa");
                 string word = text.textInfo.wordInfo[index].GetWord();
                 if (word == correctWord)
                 {
@@ -41,7 +42,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("aaaaa");
+        //Debug.Log("aaaaa");
         //    if (eventData.button == PointerEventData.InputButton.Left)
         //    {
         //        Debug.Log("aaaaa");

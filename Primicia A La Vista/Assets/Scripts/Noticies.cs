@@ -1,24 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Noticies : MonoBehaviour
 {
-    public GameObject m_Noticia;
-    public TMP_Text m_TextNoticia;
-    public List<TMP_Text> Paraula;
-
-    void Update()
+    //public GameObject m_Noticia;
+    //public TMP_Text m_TextNoticia;
+    //public List<TMP_Text> Paraula;
+   
+    public void ActivarNoticia(GameObject _Noticia)
     {
-        if(m_Noticia.activeSelf == true)
-        {
-
-        }
-    }
-
-    public void ActivarNoticia()
-    {
-        m_Noticia.SetActive(true);
+        _Noticia.SetActive(true);
     }
 }
