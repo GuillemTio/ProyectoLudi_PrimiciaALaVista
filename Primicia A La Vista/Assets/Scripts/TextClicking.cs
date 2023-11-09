@@ -28,26 +28,30 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                 l_StartCharacter=text.textInfo.characterInfo[l_StartCharacter].index;
                 l_EndCharacter = text.textInfo.characterInfo[l_EndCharacter].index;
                 string l_Text = text.text;
-                Debug.Log("Rs " + text.textInfo.wordInfo[index].firstCharacterIndex + " - " + text.textInfo.wordInfo[index].lastCharacterIndex);
-                l_Text=l_Text.Insert(l_EndCharacter+1, "</color>");
-                l_Text=l_Text.Insert(l_StartCharacter, "<color=" + correctColor + ">");
-                Debug.Log("aa " + l_Text);
-                text.text = l_Text;
+                //Debug.Log("Rs " + text.textInfo.wordInfo[index].firstCharacterIndex + " - " + text.textInfo.wordInfo[index].lastCharacterIndex);
+               
+                //Debug.Log("aa " + l_Text);
+                
                 //text.textInfo.wordInfo[index].firstCharacterIndex;
-                /*if (word == correctWord)
+                if (word == correctWord)
                 {
-                    text.text = text.text.Replace(correctWord, "<color=" + correctColor + ">" + word + "</color>");
+                    //text.text = text.text.Replace(correctWord, "<color=" + correctColor + ">" + word + "</color>");
                     //text.text.Insert(text.textInfo.wordInfo[index].firstCharacterIndex, " <color=" + correctColor + ">");
                     //text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
 
-
+                    l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
+                    l_Text = l_Text.Insert(l_StartCharacter, "<color=" + correctColor + ">");
                 }
                 else
                 {
-                    text.text = text.text.Replace(word, "<color=" + wrongColor + ">" + word + "</color>");
+                    //text.text = text.text.Replace(word, "<color=" + wrongColor + ">" + word + "</color>");
                     //text.text.Insert(text.textInfo.wordInfo[index].firstCharacterIndex, " <color=" + wrongColor + ">");
                     //text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
-                }*/
+
+                    l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
+                    l_Text = l_Text.Insert(l_StartCharacter, "<color=" + wrongColor + ">");
+                }
+                text.text = l_Text;
 
                 //Debug.Log(text.textInfo.wordInfo[index].GetWord());
 
