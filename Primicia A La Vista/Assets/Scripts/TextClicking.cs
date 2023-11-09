@@ -20,21 +20,25 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         if (Input.GetMouseButtonDown(0))
         {
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
-            Debug.Log(index);
             if (index > -1)
             {
-                Debug.Log("aaaaa");
                 string word = text.textInfo.wordInfo[index].GetWord();
                 if (word == correctWord)
                 {
-                    text.text = text.text.Replace(correctWord, "<color=" + correctColor + ">" + word + "</color>");
+                    //text.text = text.text.Replace(correctWord, "<color=" + correctColor + ">" + word + "</color>");
+                    text.text.Insert(text.textInfo.wordInfo[index].firstCharacterIndex, " <color=" + correctColor + ">");
+                    text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
+
+
                 }
                 else
                 {
-                    text.text = text.text.Replace(word, "<color=" + wrongColor + ">" + word + "</color>");
+                    //text.text = text.text.Replace(word, "<color=" + wrongColor + ">" + word + "</color>");
+                    text.text.Insert(text.textInfo.wordInfo[index].firstCharacterIndex, " <color=" + wrongColor + ">");
+                    text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
                 }
 
-                Debug.Log(text.textInfo.wordInfo[index].GetWord());
+                //Debug.Log(text.textInfo.wordInfo[index].GetWord());
 
                 //Application.OpenURL(gameObject.GetComponent<TextMeshProUGUI>().textInfo.linkInfo[index].GetLinkID());
             }
