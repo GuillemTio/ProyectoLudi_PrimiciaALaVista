@@ -1929,7 +1929,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36bad72b18722e40ada35474b0ff91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Noticies: []
+  m_Noticies:
+  - {fileID: 72212859}
+  - {fileID: 1310415524}
+  - {fileID: 1204492736}
   m_NoticiaAugmentada: []
 --- !u!4 &580229086
 Transform:
