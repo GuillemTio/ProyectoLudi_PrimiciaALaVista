@@ -6,15 +6,21 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 {
 
     [SerializeField] private TMP_Text text;
-    public Camera m_Camera;
+    //public Camera m_Camera;
     public string correctWord;
     string correctColor = "#4cbb17";
     string wrongColor = "#e32636";
+    float m_MistakesMade = 0;
+    public float m_MaxMistakesMade = 3;
+    public Noticies m_Noticia;
+
+    private void Start()
+    {
+        m_MistakesMade = 0;
+    }
 
     private void Update()
     {
-
-
 
         //Debug.Log(TMP_TextUtilities.IsIntersectingRectTransform(text.rectTransform, Input.mousePosition, m_Camera));
         if (Input.GetMouseButtonDown(0))
@@ -41,24 +47,45 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + correctColor + ">");
+
+                    LineWon();
                 }
                 else
                 {
                     //text.text = text.text.Replace(word, "<color=" + wrongColor + ">" + word + "</color>");
                     //text.text.Insert(text.textInfo.wordInfo[index].firstCharacterIndex, " <color=" + wrongColor + ">");
                     //text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
-
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + wrongColor + ">");
+
+                    m_MistakesMade += 1;
                 }
                 text.text = l_Text;
 
+
+                if (m_MistakesMade >= m_MaxMistakesMade)
+                {
+                    LineLost();
+                }
                 //Debug.Log(text.textInfo.wordInfo[index].GetWord());
 
                 //Application.OpenURL(gameObject.GetComponent<TextMeshProUGUI>().textInfo.linkInfo[index].GetLinkID());
             }
         }
     }
+
+    void LineLost()
+    {
+        m_Noticia.GetComponent<Noticies>().DesactivateLine();
+        gameObject.SetActive(false);
+    }
+
+    void LineWon()
+    {
+        m_Noticia.GetComponent<Noticies>().ActivateLine();
+        gameObject.SetActive(false);
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         //Debug.Log("aaaaa");

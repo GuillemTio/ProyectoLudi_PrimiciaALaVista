@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -396,11 +396,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 72212859}
         m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
-        m_MethodName: ActivarNoticia
-        m_Mode: 2
+        m_MethodName: ActivateNoticia
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1388780351}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -456,6 +456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1cc6e1e6a8dad44bfb1c2a3f856cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Noticia: {fileID: 1388780351}
+  m_Word:
+  - {fileID: 696401978}
+  - {fileID: 2016979584}
+  - {fileID: 1143284849}
+  - {fileID: 1410285258}
 --- !u!1 &90138415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3138,6 +3144,7 @@ GameObject:
   - component: {fileID: 1388780352}
   - component: {fileID: 1388780354}
   - component: {fileID: 1388780353}
+  - component: {fileID: 1388780355}
   m_Layer: 5
   m_Name: Noticia1
   m_TagString: Untagged
@@ -3204,6 +3211,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388780351}
   m_CullTransparentMesh: 1
+--- !u!114 &1388780355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388780351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750e48177b7b0de49a24b0f7ab3278be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1611630055}
+  correctWord: rosa
+  m_MaxMistakesMade: 3
+  m_Noticia: {fileID: 72212859}
 --- !u!1 &1395629810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3845,14 +3868,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611630053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 750e48177b7b0de49a24b0f7ab3278be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1611630055}
-  m_Camera: {fileID: 519420031}
   correctWord: rosa
+  m_MaxMistakesMade: 3
+  m_Noticia: {fileID: 72212859}
 --- !u!1 &1617325212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4873,7 +4897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 0}
+  m_AnchoredPosition: {x: 5.6, y: 0}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079908535
