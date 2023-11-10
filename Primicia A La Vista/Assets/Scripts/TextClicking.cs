@@ -10,13 +10,13 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     public string correctWord;
     string correctColor = "#4cbb17";
     string wrongColor = "#e32636";
-    float m_MistakesMade = 0;
-    public float m_MaxMistakesMade = 3;
+    //float m_MistakesMade = 0;
+    //public float m_MaxMistakesMade = 3;
     public Noticies m_Noticia;
 
     private void Start()
     {
-        m_MistakesMade = 0;
+        //m_MistakesMade = 0;
     }
 
     private void Update()
@@ -58,15 +58,15 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + wrongColor + ">");
 
-                    m_MistakesMade += 1;
+                    //m_MistakesMade += 1;
                 }
                 text.text = l_Text;
 
 
-                if (m_MistakesMade >= m_MaxMistakesMade)
-                {
-                    LineLost();
-                }
+                //if (m_MistakesMade >= m_MaxMistakesMade)
+                //{
+                //    LineLost();
+                //}
                 //Debug.Log(text.textInfo.wordInfo[index].GetWord());
 
                 //Application.OpenURL(gameObject.GetComponent<TextMeshProUGUI>().textInfo.linkInfo[index].GetLinkID());
@@ -74,11 +74,11 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    void LineLost()
-    {
-        m_Noticia.GetComponent<Noticies>().DesactivateLine();
-        gameObject.SetActive(false);
-    }
+    //void LineLost()
+    //{
+    //    m_Noticia.GetComponent<Noticies>().DesactivateLine();
+    //    gameObject.SetActive(false);
+    //}
 
     void LineWon()
     {
