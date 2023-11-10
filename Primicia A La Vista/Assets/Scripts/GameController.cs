@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    List<Noticies> m_Noticies;
-    List<GameObject> m_NoticiaAugmentada;
+    public List<Noticies> m_Noticies;
+    public List<GameObject> m_NoticiaAugmentada;
 
     private void Update()
     {
@@ -19,7 +19,10 @@ public class GameController : MonoBehaviour
 
             if(_Noticia.GetComponent<Noticies>().m_Noticia.activeSelf == true)
             {
-                _Noticia.GetComponent<Button>().enabled = false;
+                foreach (Noticies _NoticiaButton in m_Noticies)
+                {
+                    _NoticiaButton.GetComponent<Button>().enabled = false;
+                }
             }
         }
 

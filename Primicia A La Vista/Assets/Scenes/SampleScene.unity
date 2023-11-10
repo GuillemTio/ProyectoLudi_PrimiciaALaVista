@@ -1900,6 +1900,52 @@ RectTransform:
   m_AnchoredPosition: {x: 26.3, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &580229084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580229086}
+  - component: {fileID: 580229085}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &580229085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580229084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36bad72b18722e40ada35474b0ff91e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Noticies: []
+  m_NoticiaAugmentada: []
+--- !u!4 &580229086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580229084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 816.6964, y: 628.04156, z: 6.1636868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604416989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4112,7 +4158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1611630055}
   correctWord: animal
-  m_MaxMistakesMade: 3
   m_Noticia: {fileID: 72212859}
 --- !u!1 &1395629810
 GameObject:
@@ -5547,7 +5592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 865306704}
   correctWord: ulls
-  m_MaxMistakesMade: 3
   m_Noticia: {fileID: 1204492736}
 --- !u!1 &1887009040
 GameObject:
@@ -5681,7 +5725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 30299286}
   correctWord: bombers
-  m_MaxMistakesMade: 3
   m_Noticia: {fileID: 1310415524}
 --- !u!1 &2016979582
 GameObject:
