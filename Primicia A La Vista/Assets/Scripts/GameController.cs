@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,10 +11,17 @@ public class GameController : MonoBehaviour
     public List<GameObject> m_NoticiaAugmentada;
     public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
+    bool m_DaltonicOptionActive = false;
+
+    private void Awake()
+    {
+        //GameController.DontDestroyOnLoad(gameObject);
+    }
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Level1")
+        Debug.Log(m_DaltonicOptionActive);
+        if(SceneManager.GetActiveScene().name == "Level1" && SceneManager.GetActiveScene().name == "Level2")
         {
             foreach (Noticies _Noticia in m_Noticies)
             {
@@ -50,6 +58,20 @@ public class GameController : MonoBehaviour
             }
         }
 
+    }
+
+    public void DaltonicOption(TMP_Text _ButtonText)
+    {
+        if (m_DaltonicOptionActive == true)
+        {
+            m_DaltonicOptionActive = false;
+            _ButtonText.text = "No";
+        }
+        else
+        {
+            m_DaltonicOptionActive = true;
+            _ButtonText.text = "Si";
+        }
     }
 
     public void ChangeScene(string _sceneName)
