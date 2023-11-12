@@ -10,6 +10,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     public string correctWord;
     string correctColor = "#4cbb17";
     string wrongColor = "#e32636";
+    public ControladorDePuntuació pointControl;
     //float m_MistakesMade = 0;
     //public float m_MaxMistakesMade = 3;
     public Noticies m_Noticia;
@@ -17,6 +18,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         //m_MistakesMade = 0;
+        gameObject.SetActive(false);
     }
 
     private void Update()
@@ -47,7 +49,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + correctColor + ">");
-
+                    pointControl.CorrectAnswer();
                     LineWon();
                 }
                 else
@@ -57,6 +59,8 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                     //text.text.Insert(text.textInfo.wordInfo[index].lastCharacterIndex, "</color>");
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + wrongColor + ">");
+
+                    pointControl.WrongAnswer();
 
                     //m_MistakesMade += 1;
                 }
@@ -100,14 +104,4 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         //        }
         //    }
     }
-    //public void OnPointerClick(PointerEventData eventData)
-    //{
-    //    int linkIndex = TMP_TextUtilities.FindIntersectingLink(text, Input.mousePosition, null);
-    //    if (linkIndex > -1)
-    //    {
-    //        TMP_LinkInfo linkInfo = text.textInfo.linkInfo[linkIndex];
-    //        //Application.OpenURL(linkInfo.GetLinkID());
-    //        Debug.Log(linkInfo);
-    //    }
-    //}
 }
