@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(m_DaltonicOptionActive);
-        if(SceneManager.GetActiveScene().name == "Level1" && SceneManager.GetActiveScene().name == "Level2")
+        //Debug.Log(m_DaltonicOptionActive);
+        if(SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
             foreach (Noticies _Noticia in m_Noticies)
             {
