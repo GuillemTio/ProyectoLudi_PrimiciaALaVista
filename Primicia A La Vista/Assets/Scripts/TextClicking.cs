@@ -18,7 +18,6 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         //m_MistakesMade = 0;
-        gameObject.SetActive(false);
     }
 
     private void Update()

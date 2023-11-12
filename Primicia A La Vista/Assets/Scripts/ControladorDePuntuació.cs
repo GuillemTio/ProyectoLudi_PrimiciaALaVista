@@ -36,7 +36,7 @@ public class ControladorDePuntuació : MonoBehaviour
 
     private void SetText()
     {
-        pointsTMP.text = currentPoints.ToString();
+        pointsTMP.text = currentPoints.ToString("0");
     }
 
     
