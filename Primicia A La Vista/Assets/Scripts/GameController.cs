@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     public List<Noticies> m_Noticies;
     public List<GameObject> m_NoticiaAugmentada;
+    public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
 
     private void Update()
@@ -22,6 +23,10 @@ public class GameController : MonoBehaviour
             {
                 _Noticia.GetComponent<Button>().enabled = true;
             }
+            else if(m_Noticies.IndexOf(_Noticia) == 2)
+            {
+                m_Index = 0;
+            }
             
             if(_Noticia.GetComponent<Noticies>().m_Noticia.activeSelf == true)
             {
@@ -33,12 +38,21 @@ public class GameController : MonoBehaviour
             }
         }
 
+        foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
+        {
+            if(_NoticiaAug.activeSelf == true)
+            {
+                m_ExitNoticiaButton.SetActive(true);
+            }
+        }
+
     }
 
     public void ExitNoticia()
     {
         foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
         {
+            m_ExitNoticiaButton.SetActive(false);
             _NoticiaAug.SetActive(false);
         }
     }
