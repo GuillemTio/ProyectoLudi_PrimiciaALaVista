@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 150623774}
   - component: {fileID: 150623773}
   m_Layer: 5
-  m_Name: Letra4 (1)
+  m_Name: Letra5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5706,7 +5706,7 @@ GameObject:
   - component: {fileID: 838565323}
   - component: {fileID: 838565322}
   m_Layer: 5
-  m_Name: Letra4 (3)
+  m_Name: Letra7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6212,7 +6212,7 @@ GameObject:
   - component: {fileID: 876142094}
   - component: {fileID: 876142093}
   m_Layer: 5
-  m_Name: Letra4 (4)
+  m_Name: Letra8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12851,7 +12851,7 @@ GameObject:
   - component: {fileID: 2078846369}
   - component: {fileID: 2078846368}
   m_Layer: 5
-  m_Name: Letra4 (2)
+  m_Name: Letra6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
