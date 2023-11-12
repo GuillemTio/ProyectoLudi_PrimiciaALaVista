@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -12,40 +13,48 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        foreach(Noticies _Noticia in m_Noticies)
+        if(SceneManager.GetActiveScene().name == "Level1")
         {
-            if (_Noticia.GetComponent<Noticies>().WordCompleted())
+            foreach (Noticies _Noticia in m_Noticies)
             {
-                m_Index = 0;
-                _Noticia.GetComponent<Button>().enabled = false;
-            }
-            else if(!(m_Index > 0))
-            {
-                _Noticia.GetComponent<Button>().enabled = true;
-            }
-            else if(m_Noticies.IndexOf(_Noticia) == 2)
-            {
-                m_Index = 0;
-            }
-            
-            if(_Noticia.GetComponent<Noticies>().m_Noticia.activeSelf == true)
-            {
-                m_Index += 1;
-                foreach (Noticies _NoticiaButton in m_Noticies)
+                if (_Noticia.GetComponent<Noticies>().WordCompleted())
                 {
-                    _NoticiaButton.GetComponent<Button>().enabled = false;
+                    m_Index = 0;
+                    _Noticia.GetComponent<Button>().enabled = false;
+                }
+                else if (!(m_Index > 0))
+                {
+                    _Noticia.GetComponent<Button>().enabled = true;
+                }
+                else if (m_Noticies.IndexOf(_Noticia) == 2)
+                {
+                    m_Index = 0;
+                }
+
+                if (_Noticia.GetComponent<Noticies>().m_Noticia.activeSelf == true)
+                {
+                    m_Index += 1;
+                    foreach (Noticies _NoticiaButton in m_Noticies)
+                    {
+                        _NoticiaButton.GetComponent<Button>().enabled = false;
+                    }
+                }
+            }
+
+            foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
+            {
+                if (_NoticiaAug.activeSelf == true)
+                {
+                    m_ExitNoticiaButton.SetActive(true);
                 }
             }
         }
 
-        foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
-        {
-            if(_NoticiaAug.activeSelf == true)
-            {
-                m_ExitNoticiaButton.SetActive(true);
-            }
-        }
+    }
 
+    public void ChangeScene(string _sceneName)
+    {
+        SceneManager.LoadScene(_sceneName);
     }
 
     public void ExitNoticia()
