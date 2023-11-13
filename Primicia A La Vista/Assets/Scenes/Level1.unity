@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 72212859}
   m_Layer: 5
   m_Name: Noticia1
-  m_TagString: Untagged
+  m_TagString: Noticia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4569,7 +4569,7 @@ GameObject:
   - component: {fileID: 1204492736}
   m_Layer: 5
   m_Name: Noticia3
-  m_TagString: Untagged
+  m_TagString: Noticia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4953,7 +4953,7 @@ GameObject:
   - component: {fileID: 1310415524}
   m_Layer: 5
   m_Name: Noticia2
-  m_TagString: Untagged
+  m_TagString: Noticia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5336,7 +5336,7 @@ GameObject:
   - component: {fileID: 1388780355}
   m_Layer: 5
   m_Name: Noticia1
-  m_TagString: Untagged
+  m_TagString: NoticiaAug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7023,7 +7023,7 @@ GameObject:
   - component: {fileID: 1880731172}
   m_Layer: 5
   m_Name: Noticia3
-  m_TagString: Untagged
+  m_TagString: NoticiaAug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7158,7 +7158,7 @@ GameObject:
   - component: {fileID: 1898128162}
   m_Layer: 5
   m_Name: Noticia2
-  m_TagString: Untagged
+  m_TagString: NoticiaAug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
