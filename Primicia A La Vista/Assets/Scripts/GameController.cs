@@ -11,16 +11,24 @@ public class GameController : MonoBehaviour
     public List<GameObject> m_NoticiaAugmentada;
     public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
-    bool m_DaltonicOptionActive = false;
+    bool m_DaltonicOptionActive;
 
     private void Awake()
     {
-        //GameController.DontDestroyOnLoad(gameObject);
+        GameController.DontDestroyOnLoad(gameObject);
+        GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
+        foreach (GameObject _GameController in l_GameController)
+        {
+            if (_GameController != null && _GameController != this.gameObject)
+            {
+                Destroy(_GameController);
+            }
+        }
     }
 
     private void Update()
     {
-        //Debug.Log(m_DaltonicOptionActive);
+        Debug.Log(m_DaltonicOptionActive);
         if(SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
             foreach (Noticies _Noticia in m_Noticies)
@@ -34,7 +42,7 @@ public class GameController : MonoBehaviour
                 {
                     _Noticia.GetComponent<Button>().enabled = true;
                 }
-                else if (m_Noticies.IndexOf(_Noticia) == 2)
+                else if (m_Noticies.IndexOf(_Noticia) == 4)
                 {
                     m_Index = 0;
                 }
