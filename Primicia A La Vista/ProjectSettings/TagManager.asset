@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Noticia
   - NoticiaAug
+  - OptionMenuDaltonic
+  - OptionMenuAudio
+  - OptionMenu
   layers:
   - Default
   - TransparentFX

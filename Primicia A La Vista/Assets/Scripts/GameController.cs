@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
     public bool m_DaltonicOptionActive;
+    public bool m_AudioHelpOptionActive;
     bool m_AlreadyInitializated = false;
 
     private void Awake()
@@ -47,6 +48,31 @@ public class GameController : MonoBehaviour
             foreach (GameObject _NoticiaAug in l_NoticiesAug)
             {
                 m_NoticiaAugmentada.Add(_NoticiaAug);
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            GameObject[] l_Button = GameObject.FindGameObjectsWithTag("OptionMenu");
+            foreach(GameObject _Button in l_Button)
+            {
+                Debug.Log("KLK");
+                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuAudio"))
+                {
+                    Debug.Log("KLK");
+                    if (m_AudioHelpOptionActive)
+                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
+                    else
+                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
+                }
+                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuDaltonic"))
+                {
+                    Debug.Log("KLK");
+                    if (m_DaltonicOptionActive)
+                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
+                    else
+                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
+                }
             }
         }
     }
@@ -103,6 +129,20 @@ public class GameController : MonoBehaviour
         else
         {
             m_DaltonicOptionActive = true;
+            _ButtonText.text = "Si";
+        }
+    }
+
+    public void AudioHelpOption(TMP_Text _ButtonText)
+    {
+        if (m_AudioHelpOptionActive == true)
+        {
+            m_AudioHelpOptionActive = false;
+            _ButtonText.text = "No";
+        }
+        else
+        {
+            m_AudioHelpOptionActive = true;
             _ButtonText.text = "Si";
         }
     }

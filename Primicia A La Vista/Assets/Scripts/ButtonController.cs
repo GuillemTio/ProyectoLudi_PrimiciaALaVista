@@ -10,6 +10,11 @@ public class ButtonController : MonoBehaviour
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
     }
 
+    public void FindAudioHelpOption(TMP_Text _ButtonText)
+    {
+        FindObjectOfType<GameController>().AudioHelpOption(_ButtonText);
+    }
+
     public void FindDaltonicOption(TMP_Text _ButtonText)
     {
         FindObjectOfType<GameController>().DaltonicOption(_ButtonText);
