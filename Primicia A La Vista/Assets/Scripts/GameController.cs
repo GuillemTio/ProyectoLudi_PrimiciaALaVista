@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,25 +10,51 @@ public class GameController : MonoBehaviour
     public List<GameObject> m_NoticiaAugmentada;
     public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
-    bool m_DaltonicOptionActive;
+    public bool m_DaltonicOptionActive;
+    bool m_AlreadyInitializated = false;
 
     private void Awake()
     {
-        GameController.DontDestroyOnLoad(gameObject);
-        GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
-        foreach (GameObject _GameController in l_GameController)
+        if (!m_AlreadyInitializated)
         {
-            if (_GameController != null && _GameController != this.gameObject)
+            GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
+            foreach (GameObject _GameController in l_GameController)
             {
-                Destroy(_GameController);
+                if (_GameController != null && _GameController != this.gameObject)
+                {
+                    GameObject.Destroy(gameObject);
+                }
+                else
+                {
+                    GameController.DontDestroyOnLoad(gameObject);
+                }
+            }
+            m_AlreadyInitializated = true;
+        }
+    }
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
+        {
+            GameObject[] l_Noticies = GameObject.FindGameObjectsWithTag("Noticia");
+            foreach (GameObject _Noticia in l_Noticies)
+            {
+                m_Noticies.Add(_Noticia.GetComponent<Noticies>());
+            }
+
+            GameObject[] l_NoticiesAug = GameObject.FindGameObjectsWithTag("NoticiaAug");
+            foreach (GameObject _NoticiaAug in l_NoticiesAug)
+            {
+                m_NoticiaAugmentada.Add(_NoticiaAug);
             }
         }
     }
 
     private void Update()
     {
-        Debug.Log(m_DaltonicOptionActive);
-        if(SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
+        //Debug.Log(m_DaltonicOptionActive);
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
             foreach (Noticies _Noticia in m_Noticies)
             {

@@ -18,6 +18,16 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         //m_MistakesMade = 0;
+        if (FindObjectOfType<GameController>().m_DaltonicOptionActive)
+        {
+            correctColor = "#4682B4";
+            wrongColor = "#FFA500";
+        }
+        else
+        {
+            correctColor = "#4cbb17";
+            wrongColor = "#e32636";
+        }
     }
 
     private void Update()
