@@ -16,11 +16,20 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         //GameController.DontDestroyOnLoad(gameObject);
+        //GameObject[] l_GameController = gameObject.FindGameObjectsWithTag("GameController");
+        //foreach (GameObject _GameController in l_GameController)
+        //{
+        //    if (l_GameController == null && l_GameController != this)
+        //    {
+        //        Debug.Log(l_GameController);
+        //        Destroy(l_GameController);
+        //    }
+        //}
     }
 
     private void Update()
     {
-        //Debug.Log(m_DaltonicOptionActive);
+        Debug.Log(m_DaltonicOptionActive);
         if(SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
             foreach (Noticies _Noticia in m_Noticies)
