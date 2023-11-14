@@ -7,11 +7,15 @@ using TMPro;
 public class Noticies : MonoBehaviour
 {
     public GameObject m_Noticia;
+    TextClicking m_TextClick;
     public List<TMP_Text> m_Word;
     bool m_WordCompleted = false;
     public GameObject m_ExitNoticiaButton;
-    public int m_NoticiaCompleted = 0;
 
+    private void Start()
+    {
+        m_TextClick = m_Noticia.GetComponent<TextClicking>();
+    }
     //private void Start()
     //{
     //    GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
@@ -31,8 +35,11 @@ public class Noticies : MonoBehaviour
         m_ExitNoticiaButton.SetActive(true);
         FindObjectOfType<GameController>().m_ExitNoticiaButton = m_ExitNoticiaButton;
 
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        {
+            m_TextClick.SetNoticiaAudio();
+        }
     }
-
     //public void DesactivateLine()
     //{
     //    foreach(TMP_Text _Letter in m_Word)
@@ -53,6 +60,7 @@ public class Noticies : MonoBehaviour
             //_Letter.color = Color.green;
         }
         m_WordCompleted = true;
+        FindObjectOfType<GameController>().m_NoticiaCompleted++;
 
         m_ExitNoticiaButton.SetActive(false);
 
@@ -61,7 +69,6 @@ public class Noticies : MonoBehaviour
 
     public bool WordCompleted()
     {
-        m_NoticiaCompleted = 1;
         return m_WordCompleted;
     }
 }
