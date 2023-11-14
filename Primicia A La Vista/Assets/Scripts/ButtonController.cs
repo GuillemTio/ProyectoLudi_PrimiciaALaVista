@@ -10,6 +10,11 @@ public class ButtonController : MonoBehaviour
         FindObjectOfType<GameController>().Start();
     }
 
+    public void FindExitNoticia()
+    {
+        FindObjectOfType<GameController>().ExitNoticia();
+    }
+
     public void FindGCChangeScene(string _sceneName)
     {
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
