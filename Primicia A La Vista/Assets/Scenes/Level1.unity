@@ -5870,7 +5870,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70561534702f97345953c8ceda2b05dc, type: 3}
   - {fileID: 8300000, guid: d9191dd26fe90514e8db179289f7283d, type: 3}
   - {fileID: 8300000, guid: a13ecaf14a289b948a792c5e75637d48, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: e8c9d09c728c7a74098ab929777b60ab, type: 3}
   m_AudioSource: {fileID: 1388780356}
   timeToEndTimer: 2
 --- !u!82 &1388780356
@@ -7791,7 +7791,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5cc8c948451ef74384b95bc952d6002, type: 3}
   - {fileID: 8300000, guid: a5b93d889bc5c1443ad8934868d52523, type: 3}
   - {fileID: 8300000, guid: a0ae7630dca5ae845a088300da7b0137, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: d16a12f6e6626f44d9884cd33dfec27e, type: 3}
   m_AudioSource: {fileID: 1880731173}
   timeToEndTimer: 2
 --- !u!82 &1880731173
@@ -8072,7 +8072,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5469466135f096f4b8521bd16f7a0f74, type: 3}
   - {fileID: 8300000, guid: 15b64786ba7b03240be5cdbf88e0161f, type: 3}
   - {fileID: 8300000, guid: 2cefba1a9e3be6a41829386db21f337e, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: 7ec3bb8fb6c89de44a3a08d91fdf7cd9, type: 3}
   m_AudioSource: {fileID: 1898128163}
   timeToEndTimer: 2
 --- !u!82 &1898128163
