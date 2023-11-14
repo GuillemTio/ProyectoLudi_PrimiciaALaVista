@@ -23,7 +23,7 @@ public class ButtonController : MonoBehaviour
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
     }
 
-    void ButtonAudio(AudioClip _AudioClip)
+    public void ButtonAudio(AudioClip _AudioClip)
     {
         if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
         {
