@@ -17,8 +17,10 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     public Noticies m_Noticia;
 
     public List<AudioClip> m_WordAudios;
+    public AudioClip m_NoticiaAudio; 
     public AudioSource m_AudioSource;
     private float m_LastAudioIndex = -2;
+    bool m_CanSayWords = false;
 
     private void Start()
     {
@@ -41,7 +43,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
         {
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
-            if (index > -1 && m_LastAudioIndex!=index)
+            if (index > -1 && m_LastAudioIndex!=index && m_CanSayWords)
             {
                 m_AudioSource.clip = m_WordAudios[index];
                 m_AudioSource.Play();
@@ -100,6 +102,11 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                 //Application.OpenURL(gameObject.GetComponent<TextMeshProUGUI>().textInfo.linkInfo[index].GetLinkID());
             }
         }
+
+        if(!m_AudioSource.isPlaying && !m_CanSayWords)
+        {
+            m_CanSayWords = true;
+        }
     }
 
     //void LineLost()
@@ -112,6 +119,13 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     {
         m_Noticia.GetComponent<Noticies>().ActivateLine();
         gameObject.SetActive(false);
+    }
+
+    public void SetNoticiaAudio()
+    {
+        m_AudioSource.clip = m_NoticiaAudio;
+        m_AudioSource.Play();
+        m_CanSayWords = false;
     }
 
     public void OnPointerClick(PointerEventData eventData)
