@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    public AudioSource m_AudioSource;
+
     private void Start()
     {
         FindObjectOfType<GameController>().Start();
@@ -16,8 +18,17 @@ public class ButtonController : MonoBehaviour
     }
 
     public void FindGCChangeScene(string _sceneName)
-    {
+    {  
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
+    }
+
+    public void WhenClickAudio(AudioClip _AudioClip)
+    {
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        {
+            m_AudioSource.clip = _AudioClip;
+            m_AudioSource.Play();
+        }
     }
 
     public void FindAudioHelpOption(TMP_Text _ButtonText)

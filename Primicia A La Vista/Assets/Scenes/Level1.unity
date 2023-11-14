@@ -602,7 +602,6 @@ MonoBehaviour:
   - {fileID: 356670842}
   - {fileID: 302716255}
   m_ExitNoticiaButton: {fileID: 245382123}
-  m_NoticiaCompleted: 0
 --- !u!1 &90138415
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +978,7 @@ GameObject:
   - component: {fileID: 189941669}
   - component: {fileID: 189941668}
   - component: {fileID: 189941672}
+  - component: {fileID: 189941673}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1085,6 +1085,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322647a890ad0fa45b8fef07fa6d7792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 189941673}
+--- !u!82 &189941673
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189941667}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e7b00bc6c3a12c54eac07a1f4c9fc866, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &205488422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2815,7 @@ MonoBehaviour:
   m_ExitNoticiaButton: {fileID: 0}
   m_DaltonicOptionActive: 0
   m_AudioHelpOptionActive: 0
+  m_NoticiaCompleted: 0
 --- !u!4 &580229086
 Transform:
   m_ObjectHideFlags: 0
@@ -4931,7 +5029,6 @@ MonoBehaviour:
   - {fileID: 923148516}
   - {fileID: 398801626}
   m_ExitNoticiaButton: {fileID: 245382123}
-  m_NoticiaCompleted: 0
 --- !u!1 &1223848645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,7 +5494,6 @@ MonoBehaviour:
   - {fileID: 1138198247}
   - {fileID: 769149608}
   m_ExitNoticiaButton: {fileID: 245382123}
-  m_NoticiaCompleted: 0
 --- !u!1 &1378777632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,7 +5870,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70561534702f97345953c8ceda2b05dc, type: 3}
   - {fileID: 8300000, guid: d9191dd26fe90514e8db179289f7283d, type: 3}
   - {fileID: 8300000, guid: a13ecaf14a289b948a792c5e75637d48, type: 3}
+  m_NoticiaAudio: {fileID: 0}
   m_AudioSource: {fileID: 1388780356}
+  timeToEndTimer: 2
 --- !u!82 &1388780356
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7693,7 +7791,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5cc8c948451ef74384b95bc952d6002, type: 3}
   - {fileID: 8300000, guid: a5b93d889bc5c1443ad8934868d52523, type: 3}
   - {fileID: 8300000, guid: a0ae7630dca5ae845a088300da7b0137, type: 3}
+  m_NoticiaAudio: {fileID: 0}
   m_AudioSource: {fileID: 1880731173}
+  timeToEndTimer: 2
 --- !u!82 &1880731173
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7972,7 +8072,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5469466135f096f4b8521bd16f7a0f74, type: 3}
   - {fileID: 8300000, guid: 15b64786ba7b03240be5cdbf88e0161f, type: 3}
   - {fileID: 8300000, guid: 2cefba1a9e3be6a41829386db21f337e, type: 3}
+  m_NoticiaAudio: {fileID: 0}
   m_AudioSource: {fileID: 1898128163}
+  timeToEndTimer: 2
 --- !u!82 &1898128163
 AudioSource:
   m_ObjectHideFlags: 0
