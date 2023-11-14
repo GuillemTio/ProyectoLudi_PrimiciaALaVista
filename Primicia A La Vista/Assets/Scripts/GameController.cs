@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public bool m_DaltonicOptionActive;
     public bool m_AudioHelpOptionActive;
     bool m_AlreadyInitializated = false;
+    public int m_NoticiaCompleted = 0;
 
     private void Awake()
     {
@@ -97,15 +98,6 @@ public class GameController : MonoBehaviour
                 }
             }
 
-            int l_Counter = 0;
-            foreach (GameObject _Noticia in m_Noticies)
-            {
-                l_Counter++;
-                if(l_Counter >= 3)
-                {
-                    l_Counter = 0;
-                }
-            }
 
             //foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
             //{
@@ -118,6 +110,9 @@ public class GameController : MonoBehaviour
             //        //}
             //    }
             //}
+
+            if (m_NoticiaCompleted >= m_Noticies.Count)
+                ChangeScene("MainMenu");
         }
 
     }
@@ -154,6 +149,7 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneName);
 
+        m_NoticiaCompleted = 0;
         m_Noticies.Clear();
         m_NoticiaAugmentada.Clear();
         LoadLevels();
