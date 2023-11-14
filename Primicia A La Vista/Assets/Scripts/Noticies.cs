@@ -9,9 +9,27 @@ public class Noticies : MonoBehaviour
     public GameObject m_Noticia;
     public List<TMP_Text> m_Word;
     bool m_WordCompleted = false;
+    public GameObject m_ExitNoticiaButton;
+
+    //private void Start()
+    //{
+    //    GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
+    //    foreach(GameObject _GameController in l_GameController)
+    //    {
+    //        if(_GameController != null)
+    //        {
+    //            _GameController.GetComponent<GameController>().AddNoticia(this.gameObject);
+    //            _GameController.GetComponent<GameController>().AddNoticiaAug(m_Noticia);
+    //        }
+    //    }
+    //}
+
     public void ActivateNoticia()
     {
         m_Noticia.SetActive(true);
+        m_ExitNoticiaButton.SetActive(true);
+        FindObjectOfType<GameController>().m_ExitNoticiaButton = m_ExitNoticiaButton;
+
     }
 
     //public void DesactivateLine()
@@ -34,6 +52,8 @@ public class Noticies : MonoBehaviour
             //_Letter.color = Color.green;
         }
         m_WordCompleted = true;
+
+        m_ExitNoticiaButton.SetActive(false);
 
         //gameObject.GetComponent<Button>().enabled = false;
     }
