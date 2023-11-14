@@ -1832,6 +1832,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1605938999}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DaltonicOptionAudioActivat
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 9ded27d02ffa91f46865b327b59fee0f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1605938999}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: DaltonicOptionAudioDesactivat
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 1b3da4f98d21d374085015a0d1dc9566, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1717079462
 MonoBehaviour:
   m_ObjectHideFlags: 0

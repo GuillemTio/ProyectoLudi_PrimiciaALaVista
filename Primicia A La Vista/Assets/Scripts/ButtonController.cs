@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class ButtonController : MonoBehaviour
 {
@@ -19,7 +16,7 @@ public class ButtonController : MonoBehaviour
     }
 
     public void FindGCChangeScene(string _sceneName)
-    {  
+    {
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
     }
 
@@ -40,5 +37,28 @@ public class ButtonController : MonoBehaviour
     public void FindDaltonicOption(TMP_Text _ButtonText)
     {
         FindObjectOfType<GameController>().DaltonicOption(_ButtonText);
+    }
+    public void DaltonicOptionAudioDesactivat(AudioClip _AudioClip)
+    {
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        {
+            if (!FindObjectOfType<GameController>().m_DaltonicOptionActive)
+            {
+                m_AudioSource.clip = _AudioClip;
+                m_AudioSource.Play();
+            }
+        }
+    }
+
+    public void DaltonicOptionAudioActivat(AudioClip _AudioClip)
+    {
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        {
+            if (FindObjectOfType<GameController>().m_DaltonicOptionActive)
+            {
+                m_AudioSource.clip = _AudioClip;
+                m_AudioSource.Play();
+            }
+        }
     }
 }
