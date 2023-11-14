@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 245382125}
   m_Layer: 5
   m_Name: ExitNoticia
-  m_TagString: Untagged
+  m_TagString: ExitNoticia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2561,16 +2561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36bad72b18722e40ada35474b0ff91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Noticies:
-  - {fileID: 72212859}
-  - {fileID: 1310415524}
-  - {fileID: 1204492736}
-  m_NoticiaAugmentada:
-  - {fileID: 1388780351}
-  - {fileID: 1898128158}
-  - {fileID: 1880731168}
-  m_ExitNoticiaButton: {fileID: 245382123}
   m_DaltonicOptionActive: 0
+  m_AudioHelpOptionActive: 0
 --- !u!4 &580229086
 Transform:
   m_ObjectHideFlags: 0

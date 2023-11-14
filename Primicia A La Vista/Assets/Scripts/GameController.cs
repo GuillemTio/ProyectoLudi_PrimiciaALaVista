@@ -6,16 +6,20 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public List<Noticies> m_Noticies;
-    public List<GameObject> m_NoticiaAugmentada;
+    List<GameObject> m_Noticies;
+    List<GameObject> m_NoticiaAugmentada;
     public GameObject m_ExitNoticiaButton;
     int m_Index = 0;
+    int m_IndexNoticiesActives = 0;
     public bool m_DaltonicOptionActive;
     public bool m_AudioHelpOptionActive;
     bool m_AlreadyInitializated = false;
 
     private void Awake()
     {
+        m_Noticies = new List<GameObject>();
+        m_NoticiaAugmentada = new List<GameObject>();
+
         if (!m_AlreadyInitializated)
         {
             GameObject[] l_GameController = GameObject.FindGameObjectsWithTag("GameController");
@@ -34,55 +38,27 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
-        {
-            GameObject[] l_Noticies = GameObject.FindGameObjectsWithTag("Noticia");
-            foreach (GameObject _Noticia in l_Noticies)
-            {
-                m_Noticies.Add(_Noticia.GetComponent<Noticies>());
-            }
-
-            GameObject[] l_NoticiesAug = GameObject.FindGameObjectsWithTag("NoticiaAug");
-            foreach (GameObject _NoticiaAug in l_NoticiesAug)
-            {
-                m_NoticiaAugmentada.Add(_NoticiaAug);
-            }
-        }
-
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            GameObject[] l_Button = GameObject.FindGameObjectsWithTag("OptionMenu");
-            foreach(GameObject _Button in l_Button)
-            {
-                Debug.Log("KLK");
-                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuAudio"))
-                {
-                    Debug.Log("KLK");
-                    if (m_AudioHelpOptionActive)
-                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
-                    else
-                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
-                }
-                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuDaltonic"))
-                {
-                    Debug.Log("KLK");
-                    if (m_DaltonicOptionActive)
-                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
-                    else
-                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
-                }
-            }
-        }
+        LoadLevels();
     }
+
+    //public void AddNoticia(GameObject _Noticia)
+    //{
+    //    m_Noticies.Add(_Noticia);
+    //}
+    //
+    //public void AddNoticiaAug(GameObject _NoticiaAug)
+    //{
+    //    m_NoticiaAugmentada.Add(_NoticiaAug);
+    //}
 
     private void Update()
     {
         //Debug.Log(m_DaltonicOptionActive);
         if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
         {
-            foreach (Noticies _Noticia in m_Noticies)
+            foreach (GameObject _Noticia in m_Noticies)
             {
                 if (_Noticia.GetComponent<Noticies>().WordCompleted())
                 {
@@ -100,21 +76,38 @@ public class GameController : MonoBehaviour
 
                 if (_Noticia.GetComponent<Noticies>().m_Noticia.activeSelf == true)
                 {
+                    m_IndexNoticiesActives = 0;
                     m_Index += 1;
-                    foreach (Noticies _NoticiaButton in m_Noticies)
+                    foreach (GameObject _NoticiaButton in m_Noticies)
                     {
                         _NoticiaButton.GetComponent<Button>().enabled = false;
                     }
                 }
-            }
+                else
+                    m_IndexNoticiesActives++;
 
-            foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
-            {
-                if (_NoticiaAug.activeSelf == true)
+                if(m_IndexNoticiesActives >= m_Noticies.Count)
                 {
-                    m_ExitNoticiaButton.SetActive(true);
+                    foreach (GameObject _NoticiaButton in m_Noticies)
+                    {
+                        if (!_Noticia.GetComponent<Noticies>().WordCompleted())
+                            _NoticiaButton.GetComponent<Button>().enabled = true;
+                    }
+                    m_IndexNoticiesActives = 0;
                 }
             }
+
+            //foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
+            //{
+            //    if (_NoticiaAug.activeSelf == true)
+            //    {
+            //        //GameObject[] l_ButtonExitNoticia = GameObject.FindGameObjectsWithTag("ExitNoticia");
+            //        //foreach (GameObject _ButtonExtiNoticia in l_ButtonExitNoticia)
+            //        //{
+            //        //    m_ExitNoticiaButton = _ButtonExtiNoticia;
+            //        //}
+            //    }
+            //}
         }
 
     }
@@ -150,6 +143,52 @@ public class GameController : MonoBehaviour
     public void ChangeScene(string _sceneName)
     {
         SceneManager.LoadScene(_sceneName);
+
+        m_Noticies.Clear();
+        m_NoticiaAugmentada.Clear();
+        LoadLevels();
+    }
+
+    void LoadLevels()
+    {
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2")
+        {
+            GameObject[] l_Noticies = GameObject.FindGameObjectsWithTag("Noticia");
+            foreach (GameObject _Noticia in l_Noticies)
+            {
+                m_Noticies.Add(_Noticia);
+            }
+        
+            GameObject[] l_NoticiesAug = GameObject.FindGameObjectsWithTag("Noticia");
+            foreach (GameObject _NoticiaAug in l_NoticiesAug)
+            {
+                m_NoticiaAugmentada.Add(_NoticiaAug.GetComponent<Noticies>().m_Noticia);
+            }
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Options")
+        {
+            GameObject[] l_Button = GameObject.FindGameObjectsWithTag("OptionMenu");
+            foreach (GameObject _Button in l_Button)
+            {
+                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuAudio"))
+                {
+                    Debug.Log(m_AudioHelpOptionActive);
+                    if (m_AudioHelpOptionActive)
+                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
+                    else
+                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
+                }
+                if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuDaltonic"))
+                {
+                    Debug.Log(m_AudioHelpOptionActive);
+                    if (m_DaltonicOptionActive)
+                        _Button.GetComponentInChildren<TMP_Text>().text = "Si";
+                    else
+                        _Button.GetComponentInChildren<TMP_Text>().text = "No";
+                }
+            }
+        }
     }
 
     public void ExitNoticia()

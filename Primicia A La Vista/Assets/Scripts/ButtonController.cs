@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    private void Start()
+    {
+        FindObjectOfType<GameController>().Start();
+    }
+
     public void FindGCChangeScene(string _sceneName)
     {
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
