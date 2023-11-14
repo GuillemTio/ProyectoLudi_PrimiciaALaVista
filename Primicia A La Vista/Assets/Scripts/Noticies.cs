@@ -12,6 +12,7 @@ public class Noticies : MonoBehaviour
     public List<TMP_Text> m_Word;
     bool m_WordCompleted = false;
     public GameObject m_ExitNoticiaButton;
+    bool m_AlreadyUsed = false;
 
     private void Start()
     {
@@ -29,6 +30,15 @@ public class Noticies : MonoBehaviour
     //        }
     //    }
     //}
+
+    public void HelpShowingLetter()
+    {
+        if(m_Noticia.activeSelf == true && !m_AlreadyUsed)
+        {
+            m_Word[Random.Range(0, m_Word.Count)].gameObject.SetActive(true);
+            m_AlreadyUsed = true;
+        }
+    }
 
     public void ActivateNoticia()
     {
@@ -64,6 +74,8 @@ public class Noticies : MonoBehaviour
         FindObjectOfType<GameController>().m_NoticiaCompleted++;
 
         m_ExitNoticiaButton.SetActive(false);
+        gameObject.SetActive(false);
+
 
         //gameObject.GetComponent<Button>().enabled = false;
     }
