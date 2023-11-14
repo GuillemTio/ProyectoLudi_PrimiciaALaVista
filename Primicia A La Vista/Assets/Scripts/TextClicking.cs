@@ -46,7 +46,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
-        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1")
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1" && !timerRunning)
         {
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
             if (index > -1 && m_LastAudioIndex != index && m_CanSayWords)
