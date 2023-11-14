@@ -5991,6 +5991,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9191dd26fe90514e8db179289f7283d, type: 3}
   - {fileID: 8300000, guid: a13ecaf14a289b948a792c5e75637d48, type: 3}
   m_NoticiaAudio: {fileID: 8300000, guid: e8c9d09c728c7a74098ab929777b60ab, type: 3}
+  m_CorrectWord: {fileID: 8300000, guid: b20fc616c2850df4ab7723127773d27c, type: 3}
+  m_WrongWord: {fileID: 8300000, guid: 0b1e81c1ba399704ea0e985bd137fda2, type: 3}
   m_AudioSource: {fileID: 1388780356}
   timeToEndTimer: 2
 --- !u!82 &1388780356
@@ -7912,6 +7914,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5b93d889bc5c1443ad8934868d52523, type: 3}
   - {fileID: 8300000, guid: a0ae7630dca5ae845a088300da7b0137, type: 3}
   m_NoticiaAudio: {fileID: 8300000, guid: d16a12f6e6626f44d9884cd33dfec27e, type: 3}
+  m_CorrectWord: {fileID: 8300000, guid: b20fc616c2850df4ab7723127773d27c, type: 3}
+  m_WrongWord: {fileID: 8300000, guid: 0b1e81c1ba399704ea0e985bd137fda2, type: 3}
   m_AudioSource: {fileID: 1880731173}
   timeToEndTimer: 2
 --- !u!82 &1880731173
@@ -8193,6 +8197,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 15b64786ba7b03240be5cdbf88e0161f, type: 3}
   - {fileID: 8300000, guid: 2cefba1a9e3be6a41829386db21f337e, type: 3}
   m_NoticiaAudio: {fileID: 8300000, guid: 7ec3bb8fb6c89de44a3a08d91fdf7cd9, type: 3}
+  m_CorrectWord: {fileID: 8300000, guid: b20fc616c2850df4ab7723127773d27c, type: 3}
+  m_WrongWord: {fileID: 8300000, guid: 0b1e81c1ba399704ea0e985bd137fda2, type: 3}
   m_AudioSource: {fileID: 1898128163}
   timeToEndTimer: 2
 --- !u!82 &1898128163
@@ -8643,7 +8649,43 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1964978204}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 72212859}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1310415524}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1204492736}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1964978204
 MonoBehaviour:
   m_ObjectHideFlags: 0

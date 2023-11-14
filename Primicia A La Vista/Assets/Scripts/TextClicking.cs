@@ -20,6 +20,8 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
     public List<AudioClip> m_WordAudios;
     public AudioClip m_NoticiaAudio;
+    public AudioClip m_CorrectWord;
+    public AudioClip m_WrongWord;
     public AudioSource m_AudioSource;
     private float m_LastAudioIndex = -2;
     bool m_CanSayWords = false;
@@ -84,6 +86,12 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                     pointControl.CorrectAnswer();
                     m_CanClick = false;
                     timerRunning = true;
+
+                    if(FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1")
+                    {
+                        m_AudioSource.clip = m_CorrectWord;
+                        m_AudioSource.Play();
+                    }
                 }
                 else
                 {
@@ -94,6 +102,12 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + wrongColor + ">");
 
                     pointControl.WrongAnswer();
+
+                    if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1")
+                    {
+                        m_AudioSource.clip = m_WrongWord;
+                        m_AudioSource.Play();
+                    }
 
                     //m_MistakesMade += 1;
                 }
