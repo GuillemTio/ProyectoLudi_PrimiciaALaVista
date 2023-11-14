@@ -33,6 +33,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
             correctColor = "#4cbb17";
             wrongColor = "#e32636";
         }
+
     }
 
     private void Update()
