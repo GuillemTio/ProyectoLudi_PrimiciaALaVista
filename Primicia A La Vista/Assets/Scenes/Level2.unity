@@ -735,6 +735,7 @@ MonoBehaviour:
   - {fileID: 1617325214}
   - {fileID: 101996895}
   - {fileID: 356670842}
+  m_ExitNoticiaButton: {fileID: 0}
 --- !u!1 &77736849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322647a890ad0fa45b8fef07fa6d7792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AudioSource: {fileID: 0}
 --- !u!1 &205488422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2008,7 @@ MonoBehaviour:
   - {fileID: 271345771}
   - {fileID: 1640297009}
   - {fileID: 380092057}
+  m_ExitNoticiaButton: {fileID: 0}
 --- !u!114 &206787068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,6 +2300,7 @@ MonoBehaviour:
   - {fileID: 164819499}
   - {fileID: 580349035}
   - {fileID: 30877896}
+  m_ExitNoticiaButton: {fileID: 0}
 --- !u!114 &255819597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4518,20 +4522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36bad72b18722e40ada35474b0ff91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Noticies:
-  - {fileID: 72212859}
-  - {fileID: 1310415524}
-  - {fileID: 1204492736}
-  - {fileID: 206787067}
-  - {fileID: 255819596}
-  m_NoticiaAugmentada:
-  - {fileID: 1388780351}
-  - {fileID: 1898128158}
-  - {fileID: 1880731168}
-  - {fileID: 1433346933}
-  - {fileID: 1326938256}
   m_ExitNoticiaButton: {fileID: 245382123}
   m_DaltonicOptionActive: 0
+  m_AudioHelpOptionActive: 0
+  m_NoticiaCompleted: 0
 --- !u!4 &580229086
 Transform:
   m_ObjectHideFlags: 0
@@ -7947,6 +7941,7 @@ MonoBehaviour:
   - {fileID: 878220261}
   - {fileID: 2127495578}
   - {fileID: 100422256}
+  m_ExitNoticiaButton: {fileID: 0}
 --- !u!1 &1255479166
 GameObject:
   m_ObjectHideFlags: 0
@@ -8335,6 +8330,7 @@ MonoBehaviour:
   - {fileID: 1138198247}
   - {fileID: 769149608}
   - {fileID: 1446666439}
+  m_ExitNoticiaButton: {fileID: 0}
 --- !u!1 &1311523409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8411,6 +8407,10 @@ MonoBehaviour:
   correctWord: qualitat
   pointControl: {fileID: 1265452410}
   m_Noticia: {fileID: 255819596}
+  m_WordAudios: []
+  m_NoticiaAudio: {fileID: 0}
+  m_AudioSource: {fileID: 0}
+  timeToEndTimer: 2
 --- !u!114 &1326938258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8794,6 +8794,10 @@ MonoBehaviour:
   correctWord: venda
   pointControl: {fileID: 1265452410}
   m_Noticia: {fileID: 72212859}
+  m_WordAudios: []
+  m_NoticiaAudio: {fileID: 0}
+  m_AudioSource: {fileID: 0}
+  timeToEndTimer: 2
 --- !u!1 &1394529632
 GameObject:
   m_ObjectHideFlags: 0
@@ -9464,6 +9468,10 @@ MonoBehaviour:
   correctWord: mitjans
   pointControl: {fileID: 1265452410}
   m_Noticia: {fileID: 206787067}
+  m_WordAudios: []
+  m_NoticiaAudio: {fileID: 0}
+  m_AudioSource: {fileID: 0}
+  timeToEndTimer: 2
 --- !u!114 &1433346935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11901,6 +11909,10 @@ MonoBehaviour:
   correctWord: equip
   pointControl: {fileID: 1265452410}
   m_Noticia: {fileID: 1204492736}
+  m_WordAudios: []
+  m_NoticiaAudio: {fileID: 0}
+  m_AudioSource: {fileID: 0}
+  timeToEndTimer: 2
 --- !u!1 &1887009040
 GameObject:
   m_ObjectHideFlags: 0
@@ -12038,6 +12050,10 @@ MonoBehaviour:
   correctWord: extingit
   pointControl: {fileID: 1265452410}
   m_Noticia: {fileID: 1310415524}
+  m_WordAudios: []
+  m_NoticiaAudio: {fileID: 0}
+  m_AudioSource: {fileID: 0}
+  timeToEndTimer: 2
 --- !u!1 &1911766783
 GameObject:
   m_ObjectHideFlags: 0
@@ -12096,7 +12112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cerrar
+  m_text: Tancar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

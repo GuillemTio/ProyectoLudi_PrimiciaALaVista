@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Noticies : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Noticies : MonoBehaviour
         m_ExitNoticiaButton.SetActive(true);
         FindObjectOfType<GameController>().m_ExitNoticiaButton = m_ExitNoticiaButton;
 
-        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1")
         {
             m_TextClick.SetNoticiaAudio();
         }

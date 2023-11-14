@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ButtonController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class ButtonController : MonoBehaviour
         FindObjectOfType<GameController>().ChangeScene(_sceneName);
     }
 
-    public void WhenClickAudio(AudioClip _AudioClip)
+    public void ButtonAudio(AudioClip _AudioClip)
     {
         if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
         {

@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class TextClicking : MonoBehaviour, IPointerClickHandler
 {
@@ -18,7 +19,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     bool m_CanClick = true;
 
     public List<AudioClip> m_WordAudios;
-    public AudioClip m_NoticiaAudio; 
+    public AudioClip m_NoticiaAudio;
     public AudioSource m_AudioSource;
     private float m_LastAudioIndex = -2;
     bool m_CanSayWords = false;
@@ -45,10 +46,10 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
-        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1" && !timerRunning)
         {
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
-            if (index > -1 && m_LastAudioIndex!=index && m_CanSayWords)
+            if (index > -1 && m_LastAudioIndex != index && m_CanSayWords)
             {
                 m_AudioSource.clip = m_WordAudios[index];
                 m_AudioSource.Play();
@@ -64,13 +65,13 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                 string word = text.textInfo.wordInfo[index].GetWord();
                 int l_StartCharacter = text.textInfo.wordInfo[index].firstCharacterIndex;
                 int l_EndCharacter = text.textInfo.wordInfo[index].lastCharacterIndex;
-                l_StartCharacter=text.textInfo.characterInfo[l_StartCharacter].index;
+                l_StartCharacter = text.textInfo.characterInfo[l_StartCharacter].index;
                 l_EndCharacter = text.textInfo.characterInfo[l_EndCharacter].index;
                 string l_Text = text.text;
                 //Debug.Log("Rs " + text.textInfo.wordInfo[index].firstCharacterIndex + " - " + text.textInfo.wordInfo[index].lastCharacterIndex);
-               
+
                 //Debug.Log("aa " + l_Text);
-                
+
                 //text.textInfo.wordInfo[index].firstCharacterIndex;
                 if (word == correctWord)
                 {
@@ -108,11 +109,14 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                 //Application.OpenURL(gameObject.GetComponent<TextMeshProUGUI>().textInfo.linkInfo[index].GetLinkID());
             }
         }
-
-        if(!m_AudioSource.isPlaying && !m_CanSayWords)
+        if (SceneManager.GetActiveScene().name == "Level1")
         {
-            m_CanSayWords = true;
-            m_CanClick = true;
+
+            if (!m_AudioSource.isPlaying && !m_CanSayWords)
+            {
+                m_CanSayWords = true;
+                m_CanClick = true;
+            }
         }
 
         if (timerRunning)
@@ -134,7 +138,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     //    gameObject.SetActive(false);
     //}
 
-    
+
     void LineWon()
     {
         m_Noticia.GetComponent<Noticies>().ActivateLine();

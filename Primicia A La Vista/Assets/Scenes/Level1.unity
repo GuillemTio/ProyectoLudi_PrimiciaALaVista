@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 72212857}
   - component: {fileID: 72212856}
   - component: {fileID: 72212859}
+  - component: {fileID: 72212860}
   m_Layer: 5
   m_Name: Noticia1
   m_TagString: Noticia
@@ -602,6 +603,35 @@ MonoBehaviour:
   - {fileID: 356670842}
   - {fileID: 302716255}
   m_ExitNoticiaButton: {fileID: 245382123}
+--- !u!114 &72212860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72212854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 189941672}
+          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+          m_MethodName: ButtonAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 18f4de07467fb4744bf78dc112e1c149, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &90138415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1359,7 @@ GameObject:
   - component: {fileID: 245382127}
   - component: {fileID: 245382126}
   - component: {fileID: 245382125}
+  - component: {fileID: 245382128}
   m_Layer: 5
   m_Name: ExitNoticia
   m_TagString: ExitNoticia
@@ -1451,6 +1482,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245382123}
   m_CullTransparentMesh: 1
+--- !u!114 &245382128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245382123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 189941672}
+          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+          m_MethodName: ButtonAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 440267af4444bdc4eab0fe81a6573a3c, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &258391734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,6 +4948,7 @@ GameObject:
   - component: {fileID: 1204492734}
   - component: {fileID: 1204492733}
   - component: {fileID: 1204492736}
+  - component: {fileID: 1204492737}
   m_Layer: 5
   m_Name: Noticia3
   m_TagString: Noticia
@@ -5029,6 +5090,35 @@ MonoBehaviour:
   - {fileID: 923148516}
   - {fileID: 398801626}
   m_ExitNoticiaButton: {fileID: 245382123}
+--- !u!114 &1204492737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204492731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 189941672}
+          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+          m_MethodName: ButtonAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 18f4de07467fb4744bf78dc112e1c149, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1223848645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,6 +5440,7 @@ GameObject:
   - component: {fileID: 1310415522}
   - component: {fileID: 1310415521}
   - component: {fileID: 1310415524}
+  - component: {fileID: 1310415525}
   m_Layer: 5
   m_Name: Noticia2
   m_TagString: Noticia
@@ -5494,6 +5585,35 @@ MonoBehaviour:
   - {fileID: 1138198247}
   - {fileID: 769149608}
   m_ExitNoticiaButton: {fileID: 245382123}
+--- !u!114 &1310415525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310415519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 189941672}
+          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+          m_MethodName: ButtonAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 18f4de07467fb4744bf78dc112e1c149, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1378777632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +5990,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70561534702f97345953c8ceda2b05dc, type: 3}
   - {fileID: 8300000, guid: d9191dd26fe90514e8db179289f7283d, type: 3}
   - {fileID: 8300000, guid: a13ecaf14a289b948a792c5e75637d48, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: e8c9d09c728c7a74098ab929777b60ab, type: 3}
   m_AudioSource: {fileID: 1388780356}
   timeToEndTimer: 2
 --- !u!82 &1388780356
@@ -6635,7 +6755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155, y: 0}
+  m_AnchoredPosition: {x: -147, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1542203513
@@ -7791,7 +7911,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a5cc8c948451ef74384b95bc952d6002, type: 3}
   - {fileID: 8300000, guid: a5b93d889bc5c1443ad8934868d52523, type: 3}
   - {fileID: 8300000, guid: a0ae7630dca5ae845a088300da7b0137, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: d16a12f6e6626f44d9884cd33dfec27e, type: 3}
   m_AudioSource: {fileID: 1880731173}
   timeToEndTimer: 2
 --- !u!82 &1880731173
@@ -8072,7 +8192,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5469466135f096f4b8521bd16f7a0f74, type: 3}
   - {fileID: 8300000, guid: 15b64786ba7b03240be5cdbf88e0161f, type: 3}
   - {fileID: 8300000, guid: 2cefba1a9e3be6a41829386db21f337e, type: 3}
-  m_NoticiaAudio: {fileID: 0}
+  m_NoticiaAudio: {fileID: 8300000, guid: 7ec3bb8fb6c89de44a3a08d91fdf7cd9, type: 3}
   m_AudioSource: {fileID: 1898128163}
   timeToEndTimer: 2
 --- !u!82 &1898128163
@@ -8229,7 +8349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cerrar
+  m_text: Tancar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8709,6 +8829,8 @@ GameObject:
   - component: {fileID: 2041245197}
   - component: {fileID: 2041245196}
   - component: {fileID: 2041245195}
+  - component: {fileID: 2041245198}
+  - component: {fileID: 2041245199}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -8831,6 +8953,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041245193}
   m_CullTransparentMesh: 1
+--- !u!114 &2041245198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041245193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dc84ab3ec342848ac5596aae224ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2041245199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041245193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 189941672}
+          m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+          m_MethodName: ButtonAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: c1ad02d756ee0564cab7e9e608e49333, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2068809300
 GameObject:
   m_ObjectHideFlags: 0
