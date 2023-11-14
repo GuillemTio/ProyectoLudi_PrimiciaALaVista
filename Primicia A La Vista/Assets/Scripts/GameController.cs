@@ -97,6 +97,16 @@ public class GameController : MonoBehaviour
                 }
             }
 
+            int l_Counter = 0;
+            foreach (GameObject _Noticia in m_Noticies)
+            {
+                l_Counter++;
+                if(l_Counter >= 3)
+                {
+                    l_Counter = 0;
+                }
+            }
+
             //foreach (GameObject _NoticiaAug in m_NoticiaAugmentada)
             //{
             //    if (_NoticiaAug.activeSelf == true)

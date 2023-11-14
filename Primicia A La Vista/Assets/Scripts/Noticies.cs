@@ -11,6 +11,7 @@ public class Noticies : MonoBehaviour
     public List<TMP_Text> m_Word;
     bool m_WordCompleted = false;
     public GameObject m_ExitNoticiaButton;
+    public int m_NoticiaCompleted = 0;
 
     private void Start()
     {
@@ -68,6 +69,7 @@ public class Noticies : MonoBehaviour
 
     public bool WordCompleted()
     {
+        m_NoticiaCompleted = 1;
         return m_WordCompleted;
     }
 }
