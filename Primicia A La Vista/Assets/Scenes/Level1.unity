@@ -601,6 +601,7 @@ MonoBehaviour:
   - {fileID: 101996895}
   - {fileID: 356670842}
   - {fileID: 302716255}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &90138415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,6 +2562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36bad72b18722e40ada35474b0ff91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ExitNoticiaButton: {fileID: 0}
   m_DaltonicOptionActive: 0
   m_AudioHelpOptionActive: 0
 --- !u!4 &580229086
@@ -4699,6 +4701,7 @@ MonoBehaviour:
   - {fileID: 991406620}
   - {fileID: 923148516}
   - {fileID: 398801626}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &1223848645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,6 +5166,7 @@ MonoBehaviour:
   - {fileID: 1386773651}
   - {fileID: 1138198247}
   - {fileID: 769149608}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &1378777632
 GameObject:
   m_ObjectHideFlags: 0
