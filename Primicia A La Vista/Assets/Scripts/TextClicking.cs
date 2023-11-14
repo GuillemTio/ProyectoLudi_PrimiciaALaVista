@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class TextClicking : MonoBehaviour, IPointerClickHandler
 {
@@ -15,6 +16,10 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     //public float m_MaxMistakesMade = 3;
     public Noticies m_Noticia;
 
+    public List<AudioClip> m_WordAudios;
+    public AudioSource m_AudioSource;
+    private float m_LastAudioIndex = -2;
+
     private void Start()
     {
         //m_MistakesMade = 0;
@@ -28,11 +33,21 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
             correctColor = "#4cbb17";
             wrongColor = "#e32636";
         }
+
     }
 
     private void Update()
     {
-
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        {
+            int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
+            if (index > -1 && m_LastAudioIndex!=index)
+            {
+                m_AudioSource.clip = m_WordAudios[index];
+                m_AudioSource.Play();
+                m_LastAudioIndex = index;
+            }
+        }
         //Debug.Log(TMP_TextUtilities.IsIntersectingRectTransform(text.rectTransform, Input.mousePosition, m_Camera));
         if (Input.GetMouseButtonDown(0))
         {
