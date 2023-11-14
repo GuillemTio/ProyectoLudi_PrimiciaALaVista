@@ -15,12 +15,17 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     //float m_MistakesMade = 0;
     //public float m_MaxMistakesMade = 3;
     public Noticies m_Noticia;
+    bool m_CanClick = true;
 
     public List<AudioClip> m_WordAudios;
     public AudioClip m_NoticiaAudio; 
     public AudioSource m_AudioSource;
     private float m_LastAudioIndex = -2;
     bool m_CanSayWords = false;
+
+    float timer = 0;
+    public float timeToEndTimer = 2f;
+    bool timerRunning = false;
 
     private void Start()
     {
@@ -51,7 +56,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
             }
         }
         //Debug.Log(TMP_TextUtilities.IsIntersectingRectTransform(text.rectTransform, Input.mousePosition, m_Camera));
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && m_CanClick)
         {
             int index = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
             if (index > -1)
@@ -76,7 +81,8 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
                     l_Text = l_Text.Insert(l_EndCharacter + 1, "</color>");
                     l_Text = l_Text.Insert(l_StartCharacter, "<color=" + correctColor + ">");
                     pointControl.CorrectAnswer();
-                    LineWon();
+                    m_CanClick = false;
+                    timerRunning = true;
                 }
                 else
                 {
@@ -106,7 +112,20 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         if(!m_AudioSource.isPlaying && !m_CanSayWords)
         {
             m_CanSayWords = true;
+            m_CanClick = true;
         }
+
+        if (timerRunning)
+        {
+            timer += Time.deltaTime;
+            if (timer > timeToEndTimer)
+            {
+                timerRunning = false;
+                m_CanClick = true;
+                LineWon();
+            }
+        }
+
     }
 
     //void LineLost()
@@ -115,6 +134,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     //    gameObject.SetActive(false);
     //}
 
+    
     void LineWon()
     {
         m_Noticia.GetComponent<Noticies>().ActivateLine();
@@ -126,6 +146,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
         m_AudioSource.clip = m_NoticiaAudio;
         m_AudioSource.Play();
         m_CanSayWords = false;
+        m_CanClick = false;
     }
 
     public void OnPointerClick(PointerEventData eventData)
