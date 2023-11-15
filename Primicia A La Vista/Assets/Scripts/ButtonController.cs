@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class ButtonController : MonoBehaviour
 
     public void ButtonAudio(AudioClip _AudioClip)
     {
-        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive)
+        if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && !(SceneManager.GetActiveScene().name == "Level2"))
         {
             m_AudioSource.clip = _AudioClip;
             m_AudioSource.Play();
