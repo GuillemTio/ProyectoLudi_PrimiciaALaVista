@@ -2189,9 +2189,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 580229085}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: ExitNoticia
+      - m_Target: {fileID: 189941672}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: FindExitNoticia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8255,7 +8255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 72212859}
         m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
         m_MethodName: HelpShowingLetter
         m_Mode: 1
@@ -8267,7 +8267,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1310415524}
         m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
         m_MethodName: HelpShowingLetter
         m_Mode: 1
@@ -8279,7 +8279,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1204492736}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 206787067}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 255819596}
         m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
         m_MethodName: HelpShowingLetter
         m_Mode: 1
@@ -10762,7 +10786,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 189941672}
           m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
           m_MethodName: ButtonAudio
           m_Mode: 2
@@ -10830,7 +10854,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 189941672}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
         m_MethodName: FindGCChangeScene
         m_Mode: 5
