@@ -78,6 +78,7 @@ public class Noticies : MonoBehaviour
         m_WordCompleted = true;
         FindObjectOfType<GameController>().m_NoticiaCompleted++;
 
+        m_HintButton.GetComponent<Button>().enabled = false;
         m_ExitNoticiaButton.SetActive(false);
         gameObject.SetActive(false);
 
