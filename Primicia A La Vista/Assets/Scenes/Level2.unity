@@ -813,6 +813,7 @@ MonoBehaviour:
   - {fileID: 101996895}
   - {fileID: 356670842}
   m_ExitNoticiaButton: {fileID: 245382123}
+  m_HintButton: {fileID: 1204504704}
 --- !u!1 &77736849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2089,7 @@ MonoBehaviour:
   - {fileID: 1640297009}
   - {fileID: 380092057}
   m_ExitNoticiaButton: {fileID: 245382123}
+  m_HintButton: {fileID: 1204504704}
 --- !u!114 &206787068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,6 +2382,7 @@ MonoBehaviour:
   - {fileID: 580349035}
   - {fileID: 30877896}
   m_ExitNoticiaButton: {fileID: 245382123}
+  m_HintButton: {fileID: 1204504704}
 --- !u!114 &255819597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8363,6 +8366,7 @@ MonoBehaviour:
   - {fileID: 2127495578}
   - {fileID: 100422256}
   m_ExitNoticiaButton: {fileID: 245382123}
+  m_HintButton: {fileID: 1204504704}
 --- !u!1 &1204504704
 GameObject:
   m_ObjectHideFlags: 0
@@ -9086,6 +9090,7 @@ MonoBehaviour:
   - {fileID: 769149608}
   - {fileID: 1446666439}
   m_ExitNoticiaButton: {fileID: 245382123}
+  m_HintButton: {fileID: 1204504704}
 --- !u!1 &1311523409
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class Noticies : MonoBehaviour
     bool m_WordCompleted = false;
     public GameObject m_ExitNoticiaButton;
     bool m_AlreadyUsed = false;
+    public GameObject m_HintButton;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class Noticies : MonoBehaviour
     {
         if(m_Noticia.activeSelf == true && !m_AlreadyUsed)
         {
+            m_HintButton.GetComponent<Button>().enabled = false;
             m_Word[Random.Range(0, m_Word.Count)].gameObject.SetActive(true);
             m_AlreadyUsed = true;
         }
@@ -45,6 +47,9 @@ public class Noticies : MonoBehaviour
         m_Noticia.SetActive(true);
         m_ExitNoticiaButton.SetActive(true);
         FindObjectOfType<GameController>().m_ExitNoticiaButton = m_ExitNoticiaButton;
+
+        if (!m_AlreadyUsed)
+            m_HintButton.GetComponent<Button>().enabled = true;
 
         if (FindObjectOfType<GameController>().m_AudioHelpOptionActive && SceneManager.GetActiveScene().name == "Level1")
         {
