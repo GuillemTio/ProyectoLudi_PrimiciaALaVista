@@ -735,7 +735,7 @@ MonoBehaviour:
   - {fileID: 1617325214}
   - {fileID: 101996895}
   - {fileID: 356670842}
-  m_ExitNoticiaButton: {fileID: 0}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &77736849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   - {fileID: 271345771}
   - {fileID: 1640297009}
   - {fileID: 380092057}
-  m_ExitNoticiaButton: {fileID: 0}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!114 &206787068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,7 +2301,7 @@ MonoBehaviour:
   - {fileID: 164819499}
   - {fileID: 580349035}
   - {fileID: 30877896}
-  m_ExitNoticiaButton: {fileID: 0}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!114 &255819597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8018,7 +8018,7 @@ MonoBehaviour:
   - {fileID: 878220261}
   - {fileID: 2127495578}
   - {fileID: 100422256}
-  m_ExitNoticiaButton: {fileID: 0}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &1255479166
 GameObject:
   m_ObjectHideFlags: 0
@@ -8407,7 +8407,7 @@ MonoBehaviour:
   - {fileID: 1138198247}
   - {fileID: 769149608}
   - {fileID: 1446666439}
-  m_ExitNoticiaButton: {fileID: 0}
+  m_ExitNoticiaButton: {fileID: 245382123}
 --- !u!1 &1311523409
 GameObject:
   m_ObjectHideFlags: 0
@@ -12570,7 +12570,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1964978204}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 72212859}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1310415524}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1204492736}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 206787067}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 255819596}
+        m_TargetAssemblyTypeName: Noticies, Assembly-CSharp
+        m_MethodName: HelpShowingLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1964978204
 MonoBehaviour:
   m_ObjectHideFlags: 0
