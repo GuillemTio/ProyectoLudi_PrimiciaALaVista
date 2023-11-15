@@ -8,7 +8,7 @@ public class VolumeManager : MonoBehaviour
     public Slider m_VolumeSlider;
     void Start()
     {
-        if (PlayerPrefs.GetFloat("AudioMixer") >= 1)
+        if (PlayerPrefs.HasKey("AudioMixer"))
         {
             PlayerPrefs.SetFloat("AudioMixer", 1);
             Load();
