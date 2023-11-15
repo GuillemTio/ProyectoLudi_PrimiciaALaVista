@@ -179,6 +179,7 @@ public class GameController : MonoBehaviour
             {
                 if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuAudio"))
                 {
+                    Debug.Log(m_AudioHelpOptionActive);
                     if (m_AudioHelpOptionActive)
                         _Button.GetComponentInChildren<TMP_Text>().text = "Si";
                     else
@@ -186,6 +187,7 @@ public class GameController : MonoBehaviour
                 }
                 if (_Button.GetComponentInChildren<TMP_Text>().CompareTag("OptionMenuDaltonic"))
                 {
+                    Debug.Log(m_AudioHelpOptionActive);
                     if (m_DaltonicOptionActive)
                         _Button.GetComponentInChildren<TMP_Text>().text = "Si";
                     else
