@@ -27,7 +27,7 @@ public class TextClicking : MonoBehaviour, IPointerClickHandler
     bool m_CanSayWords = false;
 
     float timer = 0;
-    public float timeToEndTimer = 2f;
+    float timeToEndTimer = 1f;
     bool timerRunning = false;
 
     private void Start()
