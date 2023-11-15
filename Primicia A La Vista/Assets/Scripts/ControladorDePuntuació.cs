@@ -25,6 +25,8 @@ public class ControladorDePuntuació : MonoBehaviour
     {
         currentPoints += currentErrorPoints;
         currentErrorPoints *= errorMultiplier;
+        if (currentPoints <= -100)
+            currentPoints = -100;
         SetText();
     }
 
